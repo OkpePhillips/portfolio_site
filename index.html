@@ -50,6 +50,18 @@
             text-decoration: none;
             margin: 0 1rem;
         }
+        .hamburger {
+            display: none; /* Hidden by default */
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: var(--light-color);
+            cursor: pointer;
+        }
+        .nav-links {
+            display: none;
+            align-items: center;
+        }
 
         /* Hero Section */
         .hero {
@@ -166,10 +178,29 @@
             margin: 1rem 0;
         }
 
-        /* Update navigation to include About link */
-        .nav div {
-            display: flex;
-            align-items: center;
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block; /* Show on small screens */
+            }
+
+            .nav-links {
+                display: none; /* Hide links initially */
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: rgba(0, 0, 0, 0.8);
+                border-radius: 10px;
+                padding: 1rem;
+            }
+
+            .nav-links a {
+                margin: 0.5rem 0;
+            }
+
+            .nav-links.show {
+                display: flex; /* Show when active */
+            }
         }
     </style>
 </head>
@@ -177,7 +208,8 @@
     <nav class="nav">
         <div class="container">
             <h1>Godwin Okpe</h1>
-            <div>
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="nav-links" id="nav-links">
                 <a href="#services">Services</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
@@ -243,19 +275,6 @@
             </div>
         </div>
     </section>
-
-<!-- Update the navigation to include About link -->
-<nav class="nav">
-    <div class="container">
-        <h1>Your Name</h1>
-        <div>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-</nav>
-
     <section id="projects" class="projects">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 2rem;">Featured Projects</h2>
@@ -287,6 +306,8 @@
     </section>
 
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -295,6 +316,9 @@
                     behavior: 'smooth'
                 });
             });
+        });
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
         });
     </script>
 </body>
