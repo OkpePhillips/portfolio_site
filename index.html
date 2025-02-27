@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godwin Okpe - Software Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2ecc71;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        .nav {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+        }
+
+        .nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav a {
+            color: var(--light-color);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 0;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--light-color);
+        }
+        .about {
+            padding: 4rem 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-card h3 {
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        /* Update navigation to include About link */
+        .nav div {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <h1>Godwin Okpe</h1>
+            <div>
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div>
+                <h1>Software Engineer</h1>
+                <p>Backend API Development | Flutter Mobile Apps</p>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I'm a passionate software engineer specializing in building robust backend systems and performant mobile applications. With 3+ years of professional experience, I focus on creating solutions that are both efficient and user-friendly.</p>
+                <a href="Godwin_Okpe.pdf" class="btn" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+            <h2 id="services" style="text-align: center; margin-bottom: 2rem;">Services</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Building cross-platform mobile applications using Flutter with native-like performance and smooth animations.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend API Development</h3>
+                    <p>Designing secure, scalable RESTful APIs with proper documentation and version control.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-ad"></i>
+                    <h3>AdMob Integration</h3>
+                    <p>Implementing non-intrusive ad monetization strategies with optimal ad placement and analytics.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-bug"></i>
+                    <h3>App Testing & Debugging</h3>
+                    <p>Comprehensive testing solutions including unit tests, integration tests, and crash analytics.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>App Maintenance</h3>
+                    <p>Regular updates, feature enhancements, and legacy system modernization.</p>
+                </div>
+                
+                <div class="skill-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive web applications with modern frameworks and progressive enhancement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Update the navigation to include About link -->
+<nav class="nav">
+    <div class="container">
+        <h1>Your Name</h1>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</nav>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="sc4.jpg" alt="Hymn Book App 1">
+                    <h3>Rejoice in the Lord App</h3>
+                    <p>An offline hymn book application search capabilities and integrated with Admob.</p>
+                </div>
+                <div class="project-card">
+                    <img src="sc1.jpg" alt="Hymn Book App">
+                    <h3>CAtholic Hymn Book App</h3>
+                    <p>An offline hymn book application search capabilities and integrated with Admob.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form class="contact-form" name="contact" netlify>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
